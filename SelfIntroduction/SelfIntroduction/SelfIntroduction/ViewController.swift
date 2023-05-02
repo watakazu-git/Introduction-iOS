@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    
+    //aaaa
     
     
     let imageArr = [

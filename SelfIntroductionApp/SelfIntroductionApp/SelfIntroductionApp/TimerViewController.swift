@@ -36,8 +36,19 @@ class TimerViewController: UIViewController {
         if let t = timer {
             t.invalidate()
         }
-        elapsedTime = 0.0
     }
+    
+    @IBAction func tappedReset(_ sender: Any) {
+        elapsedTime = 0.0
+        
+        let milliSecond = Int(self.elapsedTime * 100) % 100
+        let second = Int(self.elapsedTime) % 60
+        let minutes = Int(self.elapsedTime / 60)
+        self.timerLabel.text = String(format: "%02d:%02d:%02d", minutes, second, milliSecond)
+    }
+    
+    
+    
     
 
     /*

@@ -11,6 +11,10 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var quizNumberLabel: UILabel!
     @IBOutlet var quizTextView: UITextView!
+    
+    
+    @IBOutlet var answerButton: [UIButton]!
+    
     @IBOutlet var answerButton1: UIButton!
     @IBOutlet var answerButton2: UIButton!
     @IBOutlet var answerButton3: UIButton!
@@ -60,16 +64,20 @@ class QuizViewController: UIViewController {
             judgeImageView.image = UIImage(named: "incorrect")
         }
         judgeImageView.isHidden = false
-        answerButton1.isEnabled = false
-        answerButton2.isEnabled = false
-        answerButton3.isEnabled = false
-        answerButton4.isEnabled = false
+        
+        _ = answerButton.map{$0.isEnabled = false}
+        //answerButton1.isEnabled = false
+        //answerButton2.isEnabled = false
+        //answerButton3.isEnabled = false
+        //answerButton4.isEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.judgeImageView.isHidden = true
-            self.answerButton1.isEnabled = true
-            self.answerButton2.isEnabled = true
-            self.answerButton3.isEnabled = true
-            self.answerButton4.isEnabled = true
+            
+            _ = self.answerButton.map{$0.isEnabled = true}
+            //self.answerButton1.isEnabled = true
+            //self.answerButton2.isEnabled = true
+            //self.answerButton3.isEnabled = true
+            //self.answerButton4.isEnabled = true
             self.nextQuiz()  //クロージャ
         }
     }

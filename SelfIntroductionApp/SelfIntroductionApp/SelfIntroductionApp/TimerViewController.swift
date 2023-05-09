@@ -18,8 +18,8 @@ class TimerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func didReceiveMemoryWarning() { //実行中のアプリがメモリを使いすぎた時に呼び出される。
+        super.didReceiveMemoryWarning()       //アプリのクラッシュを未然に防ぐ
     }
     
     @IBAction func tappedStart(_ sender: Any) {

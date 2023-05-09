@@ -9,16 +9,23 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var quizJsonButton: UIButton! {
+        didSet {
+            quizJsonButton.isEnabled = false
+        }
+    }
+    
     //スライドショー
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
     let images = [
         UIImage(named: "SelfIntroductionApp1"),
-        UIImage(named: "2"),
-        UIImage(named: "3"),
-        UIImage(named: "4"),
-        UIImage(named: "5")
+        UIImage(named: "SelfIntroductionApp2"),
+        UIImage(named: "SelfIntroductionApp3"),
+        UIImage(named: "SelfIntroductionApp4"),
+        UIImage(named: "SelfIntroductionApp5")
     ]
     
     var currentIndex = 0
@@ -45,10 +52,10 @@ class ViewController: UIViewController {
         //playerLayer.repeatCount = 0
         //playerLayer.repeatCount = .infinity
         playerLayer.zPosition = -1 //最背面へ
-        view.layer.insertSublayer(playerLayer, at: 0) //?
+        view.layer.insertSublayer(playerLayer, at: 0)
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
             self.player.seek(to: .zero)
-            self.player.play() //?
+            self.player.play()
         }
     }
 

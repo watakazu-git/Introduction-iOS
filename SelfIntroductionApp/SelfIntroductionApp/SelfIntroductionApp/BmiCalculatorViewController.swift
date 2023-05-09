@@ -8,20 +8,26 @@
 import UIKit
 
 class BmiCalculatorViewController: UIViewController {
-    @IBOutlet var heightTextField: UITextField!
-    @IBOutlet var weightTextField: UITextField!
-    @IBOutlet var bmiLabel: UILabel!
-    
-    
+    @IBOutlet var heightTextField: UITextField! {
+        didSet {
+            heightTextField.placeholder = "身長をcmで入力してください。"
+        }
+    }
+    @IBOutlet var weightTextField: UITextField! {
+        didSet {
+            weightTextField.placeholder = "体重をkgで入力してください。"
+        }
+    }
+    @IBOutlet var bmiLabel: UILabel! {
+        didSet {
+            bmiLabel.text = "ここに計算結果が表示されます。"
+            bmiLabel.textColor = UIColor.lightGray
+
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        heightTextField.placeholder = "身長をcmで入力してください。"
-        weightTextField.placeholder = "体重をkgで入力してください。"
-        bmiLabel.text = "ここに計算結果が表示されます。"
-        bmiLabel.textColor = UIColor.lightGray
-        
         // Do any additional setup after loading the view.
     }
     
@@ -41,7 +47,7 @@ class BmiCalculatorViewController: UIViewController {
             bmiLabel.text = "不正な値です。"
             bmiLabel.textColor = UIColor.red
         }else {
-            bmiLabel.text = calculation(height: doubleH!, weight: doubleW!)
+            bmiLabel.text = calculation(height: doubleH!, weight: doubleW!) //nilの場合があるため強制アンラップ
             
             if (Double(calculation(height: doubleH!, weight: doubleW!)) ?? 0.0 >= 25.0) {
                 bmiLabel.textColor = UIColor.red
@@ -52,8 +58,6 @@ class BmiCalculatorViewController: UIViewController {
             }
         }
     }
-    
-    
     
     func calculation(height: Double, weight: Double) -> String {
         let h = height / 100

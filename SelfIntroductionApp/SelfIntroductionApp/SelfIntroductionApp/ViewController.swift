@@ -41,13 +41,14 @@ class ViewController: UIViewController {
         player = AVPlayer(url: URL(fileURLWithPath: path!))
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        playerLayer.videoGravity = .resizeAspectFill
-        playerLayer.repeatCount = 0
-        playerLayer.zPosition = -1
-        view.layer.insertSublayer(playerLayer, at: 0)
+        playerLayer.videoGravity = .resizeAspectFill //縦横比を保ったままレイヤーサイズを満たす
+        //playerLayer.repeatCount = 0
+        playerLayer.repeatCount = .infinity
+        playerLayer.zPosition = -1 //最背面へ
+        view.layer.insertSublayer(playerLayer, at: 0) //?
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
             self.player.seek(to: .zero)
-            self.player.play()
+            self.player.play() //?
         }
     }
 
@@ -76,7 +77,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         currentIndex = Int(scrollView.contentOffset.x / collectionView.frame.size.width)
         pageControl.currentPage = currentIndex
     }

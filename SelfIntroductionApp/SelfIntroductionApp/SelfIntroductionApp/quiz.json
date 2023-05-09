@@ -1,0 +1,6 @@
+quiz : [
+    {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"}
+    {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"}
+    {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"}
+    
+]

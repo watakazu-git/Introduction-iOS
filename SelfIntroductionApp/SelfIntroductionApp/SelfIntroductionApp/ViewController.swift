@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         playerLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         playerLayer.videoGravity = .resizeAspectFill //縦横比を保ったままレイヤーサイズを満たす
         //playerLayer.repeatCount = 0
-        playerLayer.repeatCount = .infinity
+        //playerLayer.repeatCount = .infinity
         playerLayer.zPosition = -1 //最背面へ
         view.layer.insertSublayer(playerLayer, at: 0) //?
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
 
 
 }
-//スライドショー
+//スライドショー(スクロール処理)
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -37,12 +37,15 @@ class BmiCalculatorViewController: UIViewController {
         }else if (doubleW == nil) {
             bmiLabel.text = "体重が入力されていません。"
             bmiLabel.textColor = UIColor.red
+        }else if (doubleH! < doubleW!) {
+            bmiLabel.text = "不正な値です。"
+            bmiLabel.textColor = UIColor.red
         }else {
             bmiLabel.text = calculation(height: doubleH!, weight: doubleW!)
             
-            if (Float(calculation(height: doubleH!, weight: doubleW!)) ?? 0.0 >= 25.0) {
+            if (Double(calculation(height: doubleH!, weight: doubleW!)) ?? 0.0 >= 25.0) {
                 bmiLabel.textColor = UIColor.red
-            }else if (Float(calculation(height: doubleH!, weight: doubleW!)) ?? 0.0 < 18.0) {
+            }else if (Double(calculation(height: doubleH!, weight: doubleW!)) ?? 0.0 < 18.0) {
                 bmiLabel.textColor = UIColor.cyan
             }else {
                 bmiLabel.textColor = UIColor.green

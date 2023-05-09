@@ -1,6 +1,32 @@
-quiz : [
-    {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"}
-    {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"}
-    {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"}
+[
+    {
+        {"question" : "私の好きな食べ物はなんでしょう？", "correct" : 4, "answer1" : "ハンバーグ", "answer2" : "海鮮丼", "answer3" : "タコライス", "answer4" : "パスタ"},
+        {"question" : "好きな色はなんでしょう？", "correct" : 2, "answer1" : "赤色", "answer2" : "緑色", "answer3" : "青色", "answer4" : "黄色"},
+        {"question" : "好きな音楽のジャンルはなんでしょう？", "correct" : 3, "answer1" : "J-POP", "answer2" : "K-POP", "answer3" : "洋楽", "answer4" : "演歌"}
+    },
     
+    {
+        {"question" : "誕生日はいつでしょう？", "correct" : 3, "answer1" : "3月18日", "answer2" : "7月5日", "answer3" : "8月20日", "answer4" : "12月28日"},
+        {"question" : "好きなスポーツは何でしょう？", "correct" : 1, "answer1" : "サッカー", "answer2" : "野球", "answer3" : "テニス", "answer4" : "卓球"},
+        {"question" : "好きな音楽のジャンルはなんでしょう？", "correct" : 3, "answer1" : "J-POP", "answer2" : "K-POP", "answer3" : "洋楽", "answer4" : "演歌"}
+    },
+    
+    {
+        {"question" : "好きなファッションブランドは何でしょう？", "correct" : 4, "answer1" : "ルイ・ヴィトン", "answer2" : "プラダ", "answer3" : "シュプリーム", "answer4" : "メゾン・マルジェラ"},
+        {"question" : "最近ハマっているもの(こと)は何でしょう？", "correct" : 2, "answer1" : "手芸", "answer2" : "カプチーノ", "answer3" : "ダーツ", "answer4" : "お菓子作り"},
+        {"question" : "行ってみたい国はどこでしょう？", "correct" : 1, "answer1" : "フランス", "answer2" : "スペイン", "answer3" : "カナダ", "answer4" : "ニュージーランド"}
+    }
+        
 ]
+        
+        
+        
+        
+ 
+ 
+ 
+ 好きなファッションブランドは何でしょう？,4,ルイ・ヴィトン,プラダ,シュプリーム,メゾン・マルジェラ
+ 最近ハマっているもの(こと)は何でしょう？,2,手芸,カプチーノ,ダーツ,お菓子作り
+ 行ってみたい国はどこでしょう？,1,フランス,スペイン,カナダ,ニュージーランド
+
+

@@ -11,6 +11,7 @@
 		642325992A07E42000518346 /* SelectLebelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642325982A07E42000518346 /* SelectLebelViewController.swift */; };
 		6423259B2A07E77400518346 /* quiz2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6423259A2A07E77400518346 /* quiz2.csv */; };
 		6423259D2A07E9CF00518346 /* quiz3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6423259C2A07E9CF00518346 /* quiz3.csv */; };
+		6423259F2A09499300518346 /* quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = 6423259E2A09499300518346 /* quiz.json */; };
 		64450E7929FF98FB00D2DCD5 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64450E7829FF98FB00D2DCD5 /* ToDoListViewController.swift */; };
 		645017B02A03A91500769AAF /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645017AF2A03A91500769AAF /* CalenderViewController.swift */; };
 		64D26CF329FEC81000E53F54 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D26CF229FEC81000E53F54 /* TimerViewController.swift */; };
@@ -35,6 +36,7 @@
 		642325982A07E42000518346 /* SelectLebelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLebelViewController.swift; sourceTree = "<group>"; };
 		6423259A2A07E77400518346 /* quiz2.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz2.csv; sourceTree = "<group>"; };
 		6423259C2A07E9CF00518346 /* quiz3.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz3.csv; sourceTree = "<group>"; };
+		6423259E2A09499300518346 /* quiz.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz.json; sourceTree = "<group>"; };
 		64450E7829FF98FB00D2DCD5 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		645017AF2A03A91500769AAF /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		64D26CF229FEC81000E53F54 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				64E00B0329FE89B500699F53 /* ViewController.swift */,
 				64E00B1329FE8C9300699F53 /* SliderCell.swift */,
 				64E00B0529FE89B500699F53 /* Main.storyboard */,
+				6423259E2A09499300518346 /* quiz.json */,
 				642325962A07A1C500518346 /* BmiCalculatorViewController.swift */,
 				64D60A052A07547900D8F11B /* QuizViewController.swift */,
 				64D60A072A07571100D8F11B /* quiz1.csv */,
@@ -184,6 +187,7 @@
 				64D60A082A07571100D8F11B /* quiz1.csv in Resources */,
 				64E00B0929FE89B600699F53 /* Assets.xcassets in Resources */,
 				6423259D2A07E9CF00518346 /* quiz3.csv in Resources */,
+				6423259F2A09499300518346 /* quiz.json in Resources */,
 				64D60A0F2A07976D00D8F11B /* incorrect.png in Resources */,
 				6423259B2A07E77400518346 /* quiz2.csv in Resources */,
 				64E00B0729FE89B500699F53 /* Main.storyboard in Resources */,

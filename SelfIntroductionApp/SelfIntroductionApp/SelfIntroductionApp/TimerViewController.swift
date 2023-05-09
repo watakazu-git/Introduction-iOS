@@ -23,6 +23,7 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func tappedStart(_ sender: Any) {
+        timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
             self.elapsedTime += 0.01
             let milliSecond = Int(self.elapsedTime * 100) % 100
@@ -36,6 +37,7 @@ class TimerViewController: UIViewController {
         if let t = timer {
             t.invalidate()
         }
+        timer?.invalidate()
     }
     
     @IBAction func tappedReset(_ sender: Any) {

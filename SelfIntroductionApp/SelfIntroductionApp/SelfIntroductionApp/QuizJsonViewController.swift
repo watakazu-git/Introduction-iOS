@@ -4,7 +4,7 @@
 //
 //  Created by Watanabe Kazuyuki on 2023/05/09.
 //
-/*
+
 import UIKit
 
 class QuizJsonViewController: UIViewController {
@@ -58,11 +58,11 @@ class QuizJsonViewController: UIViewController {
         quizNumberLabel.text = quizContents[0].lvl2.answer2
         
         quizNumberLabel.text = "第\(quizCount + 1)問"
-        quizTextView.text = quizContents[0].lvl1
-        answerButton1.setTitle(quizArray[2], for: .normal)
-        answerButton2.setTitle(quizArray[3], for: .normal)
-        answerButton3.setTitle(quizArray[4], for: .normal)
-        answerButton4.setTitle(quizArray[5], for: .normal)
+        //quizTextView.text = quizContents[0].lvl1
+        //answerButton1.setTitle(quizArray[2], for: .normal)
+        //answerButton2.setTitle(quizArray[3], for: .normal)
+        //answerButton3.setTitle(quizArray[4], for: .normal)
+        //answerButton4.setTitle(quizArray[5], for: .normal)
         // Do any additional setup after loading the view.
     }
     
@@ -97,4 +97,4 @@ class QuizJsonViewController: UIViewController {
      */
     
 }
-*/
+

@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var quizJsonButton: UIButton! {
         didSet {
-            quizJsonButton.isEnabled = false
+            quizJsonButton.isEnabled = true
         }
     }
     
@@ -39,13 +39,13 @@ class ViewController: UIViewController {
         
         pageControl.numberOfPages = images.count
         
-        initAVPlayer()
+        initAvplayer()
         self.player.play()
     }
     
-    private func initAVPlayer() {
-        let path = Bundle.main.path(forResource: "Background", ofType: "mp4")
-        player = AVPlayer(url: URL(fileURLWithPath: path!))
+    private func initAvplayer() {
+        guard let path = Bundle.main.path(forResource: "Background", ofType: "mp4") else{ return }
+        player = AVPlayer(url: URL(fileURLWithPath: path))
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         playerLayer.videoGravity = .resizeAspectFill //縦横比を保ったままレイヤーサイズを満たす

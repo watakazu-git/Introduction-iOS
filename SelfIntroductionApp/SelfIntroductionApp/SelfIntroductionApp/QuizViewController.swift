@@ -22,8 +22,8 @@ class QuizViewController: UIViewController {
     @IBOutlet var judgeImageView: UIImageView!
     
     
-    var csvArray: [String] = []
-    var quizArray: [String] = []
+    var csvArray = [String]()
+    var quizArray = [String]()
     var quizCount = 0
     var correctCount = 0
     var selectLebel = 0
@@ -33,7 +33,7 @@ class QuizViewController: UIViewController {
         
         print("選択したのはレベル\(selectLebel)")
         
-        csvArray = loadCSV(fileName: "quiz\(selectLebel)")
+        csvArray = loadCsv(fileName: "quiz\(selectLebel)")
         csvArray.shuffle()
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
@@ -49,12 +49,12 @@ class QuizViewController: UIViewController {
     
     //画面遷移するときにcorrectに正解数を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let scoreVC = segue.destination as! ScoreViewController
-        scoreVC.correct = correctCount
+        let scoreViewController = segue.destination as! ScoreViewController
+        scoreViewController.correct = correctCount
     }
     
     //ボタンが押されるとtagをprint
-    @IBAction func btnAction(sender: UIButton) {
+    @IBAction func buttonAction(sender: UIButton) {
         if sender.tag == Int(quizArray[1]) {
             print("正解")
             correctCount += 1
@@ -63,14 +63,14 @@ class QuizViewController: UIViewController {
             print("不正解")
             judgeImageView.image = UIImage(named: "incorrect")
         }
-        judgeImageView.isHidden = false
+        //judgeImageView.isHidden = false
         
         _ = answerButton.map{$0.isEnabled = false}
         //answerButton1.isEnabled = false
         //answerButton2.isEnabled = false
         //answerButton3.isEnabled = false
         //answerButton4.isEnabled = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { //
             self.judgeImageView.isHidden = true
             
             _ = self.answerButton.map{$0.isEnabled = true}
@@ -100,7 +100,7 @@ class QuizViewController: UIViewController {
     }
     
     //csvデータを配列に変換
-    func loadCSV(fileName: String) -> [String] {
+    func loadCsv(fileName: String) -> [String] {
         let csvBundle = Bundle.main.path(forResource: fileName, ofType: "csv")!
         do {
             let csvData = try String(contentsOfFile: csvBundle, encoding: String.Encoding.utf8)
@@ -109,6 +109,7 @@ class QuizViewController: UIViewController {
             csvArray.removeLast()
         } catch {
             print("エラー")
+            print(error.localizedDescription)
         }
         return csvArray
     }

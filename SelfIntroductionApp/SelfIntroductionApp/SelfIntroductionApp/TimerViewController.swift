@@ -22,8 +22,8 @@ class TimerViewController: UIViewController {
         super.didReceiveMemoryWarning()       //アプリのクラッシュを未然に防ぐ
     }
     
-    @IBAction func tappedStart(_ sender: Any) {
-        timer?.invalidate()
+    @IBAction func tappedStartButton(_ sender: UIButton) {
+        timer?.invalidate() //タイマーを破棄
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
             self.elapsedTime += 0.01
             let milliSecond = Int(self.elapsedTime * 100) % 100

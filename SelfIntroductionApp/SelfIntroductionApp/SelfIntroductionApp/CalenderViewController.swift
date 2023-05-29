@@ -12,7 +12,7 @@ class CalenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .brown
+        view.backgroundColor = .white
         let selection = UICalendarSelectionSingleDate(delegate: self)
         let calendarView = UICalendarView()
         calendarView.frame = view.bounds
